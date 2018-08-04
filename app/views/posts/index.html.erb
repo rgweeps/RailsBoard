@@ -1,7 +1,9 @@
 <h1>投稿一覧</h1>
 <p>
-  <%= @posts.each do |post| %>
-    post
+  <% @posts.each do |post| %>
+  <!-- 上の一行は表示するコードではないので、= はつけない。 -->
+  <!-- fix me: 一時的に br タグで改行して表示 -->
+  <!--  post.content <br> -->
+  <%= link_to(post.content, "/posts/#{post.id}") %><br>
   <% end %>
-
 </p>
