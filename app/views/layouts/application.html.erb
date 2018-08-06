@@ -2,6 +2,7 @@
 <header>
   <%= link_to("RailsBoard", "/") %>
   <%= link_to("RailsBoardとは", "/about") %>
+  <%= link_to("新規投稿", "/posts/new") %>
   <!-- いずれは、「スレッド一覧」にしたい -->
   <%= link_to("投稿一覧", "/posts/index") %>
 </ul>
@@ -16,6 +17,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+  <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
 
   <body>
     <%= yield %>

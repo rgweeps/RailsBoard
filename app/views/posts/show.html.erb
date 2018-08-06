@@ -1,5 +1,7 @@
 <h1>投稿詳細</h1>
 <p>
   投稿内容：<%= @post.content %><br>
-  投稿日時：<%= @post.created_at %>
+  投稿日時：<%= @post.created_at %><br>
+  <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+  <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
 </p>
