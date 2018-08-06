@@ -1,5 +1,5 @@
 # RailsBoard
-This is a web application probiding message board.  
+This is a web application providing message board.  
 
 ## Features
 - [x] post message
